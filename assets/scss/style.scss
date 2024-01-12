@@ -1,0 +1,106 @@
+/*-------------------------------------
+    Template Name: Wingsprint - Printing Company Html5 Template
+    Template URI: 
+    Description: Wingsprint - Printing Company Html5 Template
+    Author: Themeies
+    Author URI: 
+    Version: 1.0
+    Tags: theme, template, etc
+---------------------------------------*/
+
+/*
+    Table of Context
+    -------------------------------
+    01. Common CSS
+    02. Content Box
+    03. Video Box
+    04. Icon Box
+    05. Order, Unorder List
+    06. Round One side
+    07. Overlap Image Box
+    08. Image Box
+    09. Icon list block
+    
+    01. Header style
+    02. Banner style
+    03. Block style
+    04. About section
+    05. Service Feature section
+    06. Team section
+    07. Service section
+    08. Request Order section
+    09. Counter section 
+    10. Product section
+    11. Pricing section
+    12. Testimonial section
+    13. Blog section
+    14. Blog Single section
+    15. Faq section
+    16. Cart section
+    17. Login popup
+    18. Signup popup 
+    19. Contact section
+    20. Call to Action section
+    21. flyout Menu
+    21. Footer
+
+    23. Home Page
+    24. About page 
+    25. Service page
+    26. Service Single page
+    27. Shop page
+    28. Shop Single page
+    29. Blog Page
+    30. Blog Single page
+    31. Catr page
+    32. Login page
+    33. Register page
+    34. Contact page
+   
+*/
+
+/*********************************
+/* Fonts
+/* Montserrat
+/* Roboto
+*********************************/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+// Partial files
+@import "base/functions";
+@import "base/themes";
+@import "base/mediaQuery";
+@import "base/variables";
+@import "base/mixins";
+@import "base/reset";
+@import "base/util";
+@import "base/global";
+@import "base/common";
+
+// components
+@import "components/preloader";
+@import "components/back-top";
+@import "components/btn";
+@import "components/header";
+@import "components/flyoutMenu";
+@import "components/banner";
+@import "components/breadcrumb";
+@import "components/section-title";
+@import "components/iconbox";
+@import "components/teams";
+@import "components/imageBox";
+@import "components/funfact";
+@import "components/about";
+@import "components/product";
+@import "components/blog";
+@import "components/blog-single";
+@import "components/contact";
+@import "components/pricing";
+@import "components/testimonial";
+@import "components/services";
+@import "components/pagination";
+@import "components/cart";
+@import "components/quantity";
+@import "components/sidebar";
+@import "components/product-single";
+@import "components/footer";

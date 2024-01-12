@@ -1,0 +1,529 @@
+/*********************************
+/* Contact Box Start
+**********************************/
+.contactBox {
+    @include flexbox($a: Start, $jc: center);
+    flex-wrap: nowrap;
+    max-width: 1010px;
+    margin: auto;
+    @include respond(tabport) {
+        display: block;
+    }
+    .section__title {
+        .title {
+            color: $heading3;
+        }
+    }
+    &__wrap {
+        flex-basis: 50%;
+        padding: 40px;
+
+        @include respond(tabland) {
+            padding: 40px 10px 40px 0;
+        }
+    }
+    &__address {
+        @include flexbox($a: center, $jc: inherit);
+        margin-bottom: 64px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    &__icon {
+        height: 64px;
+        width: 64px;
+        background: $primary;
+        border-radius: 8px;
+        color: $white;
+        font-size: 24px;
+        @include flexbox($a: center, $jc: center);
+
+        @include respond(phone-sm) {
+            height: 55px;
+            width: 55px;
+        }
+    }
+    &__content {
+        margin-left: 16px;
+        flex: 1;
+    }
+    &__label {
+        font-family: $default;
+        font-size: 16px;
+        font-weight: $regular;
+        line-height: 24px;
+        color: $content3;
+        margin-bottom: 8px;
+    }
+    &__title {
+        font-family: $default;
+        font-size: 24px;
+        font-weight: $bold;
+        line-height: 31px;
+        color: $heading3;
+        margin-bottom: 0px;
+        a {
+            color: $heading3;
+            display: inline-block;
+            transition: $transition;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+        @include respond(tabland) {
+            font-size: 20px;
+        }
+        @include respond(phone-sm) {
+            font-size: 18px;
+        }
+    }
+}
+
+/*********************************
+/* Contact Box End
+**********************************/
+
+/*********************************
+/* Contact Form Start 
+**********************************/
+.contact__wrapper {
+    flex: 1;
+    background: #fcfaff;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0px 1px 5px 0px #5050501a;
+
+    @include respond(tabport) {
+        margin-top: 30px;
+    }
+    @include respond(phone-sm) {
+        padding: 40px 20px;
+    }
+
+    .block__title {
+        color: $heading3;
+        margin-bottom: 45px;
+    }
+}
+
+.form__wrapper {
+    .form-group {
+        margin-bottom: 24px;
+        position: relative;
+    }
+
+    label {
+        font-family: $roboto;
+        font-size: 16px;
+        font-weight: $regular;
+        line-height: 24px;
+        color: $heading3;
+        display: block;
+        margin-bottom: 8px;
+        text-transform: capitalize;
+    }
+    .icon {
+        height: 24px;
+        width: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 16px;
+        right: 23px;
+
+        img {
+            width: auto;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .form-control {
+        font-family: $roboto;
+        font-size: 16px;
+        font-weight: $regular;
+        line-height: 24px;
+        background: $white;
+        border: 1px solid #a8aff0;
+        border-radius: 8px;
+        color: #999999;
+        display: block;
+        width: 100%;
+        position: relative;
+        padding: 16px;
+        -webkit-appearance: none;
+
+        &:focus {
+            box-shadow: none;
+            border-color: $primary;
+            -webkit-appearance: none;
+        }
+
+        &::placeholder {
+            text-transform: capitalize;
+            color: #999999;
+        }
+    }
+    .btn {
+        margin-top: 30px;
+        padding: 19px;
+
+        @include respond(phone) {
+            font-size: 16px;
+            padding: 16px;
+        }
+    }
+}
+
+/*********************************
+/* Contact Form End 
+**********************************/
+
+/*********************************
+/* Contact Top Start 
+**********************************/
+.contact__box--wrapper {
+    background: $white;
+    box-shadow: 0px 4px 8px rgba(14, 30, 53, 0.16);
+    border-radius: 8px;
+    padding: 50px 15px;
+    text-align: center;
+    height: calc(100% - 30px);
+
+    @include respond(tabland) {
+        margin-bottom: 30px;
+    }
+    .icon {
+        width: auto;
+        height: 60px;
+        img {
+            width: auto;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .content {
+        margin-top: 20px;
+        p {
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.04em;
+            color: #5c6680;
+
+            a {
+                color: #5c6680;
+                display: block;
+                transition: $transition;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+/*********************************
+/* Contact Top End 
+**********************************/
+
+/*********************************
+/* Map Start
+**********************************/
+#map {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+}
+/*********************************
+/* Map End
+**********************************/
+
+/*********************************
+/* Request Order Start
+**********************************/
+.request__order__section {
+    background-color: #a8aff0;
+    padding: 64px 0;
+    @include bg-props;
+    background-image: url("../images/banner/request-order-bg.jpg");
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &::after {
+        @include bg-overlay;
+        background-color: rgba(#283646, 0.9);
+        mix-blend-mode: multiply;
+        z-index: -1;
+    }
+    .contact__wrapper {
+        border-radius: 8px 8px 0 0;
+        border-bottom-color: transparent;
+        box-shadow: none;
+        transform: translateY(64px);
+        @include respond(tabland) {
+            padding: 16px 16px 25px;
+        }
+    }
+    .form-control {
+        background-color: #f4f4f6;
+        border-color: transparent;
+    }
+    .file-upload {
+        margin-bottom: 80px;
+    }
+}
+.req__widget__wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.req__widget {
+    max-width: 300px;
+    padding-top: 48px;
+
+    @include respond(phone-sm) {
+        padding-top: 24px;
+    }
+    .title {
+        margin-bottom: 24px;
+
+        h5 {
+            font-size: 24px;
+            font-weight: $semibold;
+            color: $secondary;
+        }
+    }
+    p {
+        color: $white;
+        font-size: 15px;
+        line-height: 26px;
+        font-weight: $regular;
+    }
+
+    ul {
+        list-style: none;
+        li {
+            display: flex;
+            align-items: center;
+            font-family: $default;
+            font-size: 14px;
+            font-weight: $regular;
+            line-height: 24px;
+            color: $white;
+            margin-bottom: 12px;
+            a {
+                color: $white;
+                display: flex;
+                align-items: center;
+                transition: $transition;
+                //  padding-left: 3px;
+
+                &:hover {
+                    color: $secondary;
+                }
+
+                img {
+                    width: auto;
+                    height: auto;
+                    display: block;
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+    &.time__wrapper {
+        max-width: unset;
+        width: 100%;
+        .title {
+            margin-bottom: 25px;
+        }
+        ul {
+            @include flexbox($jc: space-between, $a: center);
+            padding: 24px 0;
+            border-top: 1px solid #8f8f8f;
+            border-bottom: 1px solid #8f8f8f;
+            li {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+/*********************************
+/* Request Order End
+**********************************/
+
+/*********************************
+/* Search Form Start 
+*********************************/
+.search__form {
+    @include flexbox($a: center, $jc: inherit);
+    flex-wrap: nowrap;
+    border: 1px solid $border;
+    max-width: 500px;
+    background-color: $white;
+    height: 50px;
+    border-radius: $radius;
+    position: relative;
+    width: 100%;
+    margin: 45px auto 0;
+    box-shadow: 0px 2px 16px 0px #17384e1a;
+
+    @include respond(phone) {
+        max-width: 100%;
+    }
+
+    .form-control {
+        font-family: $default;
+        font-size: 16px;
+        font-weight: $regular;
+        line-height: 19px;
+        height: 100%;
+        color: $content;
+        border: none;
+        outline: none;
+        padding: 11px 15px;
+        background: transparent;
+        flex: 1;
+
+        &:focus {
+            border: none;
+            box-shadow: none;
+        }
+    }
+    button {
+        border: 0;
+        padding: 0;
+        outline: none;
+        font-size: 16px;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        border-radius: 0px $radius $radius 0;
+        color: $white;
+        background: $secondary;
+        height: 100%;
+        width: 70px;
+        @include flexbox($a: center, $jc: center);
+        // border-left: 1px solid $border;
+        border: none;
+        transition: $transition;
+
+        img {
+            width: auto;
+            height: auto;
+        }
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+    }
+}
+/*********************************
+/* Search Form Start 
+*********************************/
+
+/*********************************
+/* Login Form Start 
+*********************************/
+.login__form {
+    background: $white;
+    border-radius: $radius;
+    border: 1px solid $border;
+    padding: 70px 50px;
+    box-shadow: 0px 1px 5px 0px #5050501a;
+    max-width: 600px;
+    margin: auto;
+
+    @include respond(tabport) {
+        padding: 70px 30px;
+    }
+
+    .login__access {
+        @include flexbox($a: center, $jc: center);
+
+        .btn {
+            margin-top: 0;
+            height: 50px;
+            padding: 15px 30px;
+            margin-right: 15px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+            @include respond(phone-sm) {
+                height: 50px;
+                padding: 15px 18px;
+                font-size: 14px;
+            }
+
+            @media (max-width: 374px) {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .devider {
+        font-size: 16px;
+        font-weight: $medium;
+        color: $content;
+        margin: 15px 0;
+    }
+    .account__desc {
+        @include flexbox($a: center, $jc: space-between);
+        margin-top: 15px;
+
+        @include respond(phone-sm) {
+            flex-direction: column;
+        }
+    }
+    .forget {
+        font-family: $default;
+        font-size: 16px;
+        font-weight: $medium;
+        display: inline-block;
+        color: $secondary;
+        transition: $transition;
+
+        &:hover {
+            color: $primary;
+        }
+        @include respond(phone) {
+            font-size: 15px;
+        }
+        @include respond(phone-sm) {
+            font-size: 14px;
+        }
+    }
+    .account__meta {
+        font-family: $default;
+        font-size: 16px;
+        font-weight: $medium;
+        color: $content;
+
+        @include respond(phone) {
+            font-size: 15px;
+        }
+        @include respond(phone-sm) {
+            font-size: 14px;
+        }
+
+        a {
+            display: inline-block;
+            color: $secondary;
+            transition: $transition;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
+/*********************************
+/* Login Form Start 
+*********************************/

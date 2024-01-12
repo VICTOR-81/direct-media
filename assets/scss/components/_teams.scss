@@ -1,0 +1,131 @@
+/*********************************
+/*  Teams Links Css Start
+*********************************/
+.team__section {
+}
+
+.team__card {
+	width: 100%;
+	border-radius: $radius * 2 $radius * 2 0 0;
+	border: 6px solid $white;
+	box-shadow: 0px 1px 5px 0px #5050501a;
+	position: relative;
+	margin-bottom: 50px;
+	.team {
+		&__avatar {
+			aspect-ratio: 4/4.5;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				border-radius: $radius * 2 $radius * 2 0 0;
+			}
+		}
+		&__info {
+			width: calc(100% - 50px);
+			background: $white;
+			padding: 24px 42px;
+			border-radius: $radius;
+			box-shadow: 0px 5px 25px 0px #5050501a;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 40%);
+			transition: $transition;
+			@include respond(tabland) {
+				width: calc(100% - 25px);
+				padding: 12px 16px 24px;
+			}
+			.name {
+				font-family: $default;
+				font-size: 24px;
+				font-weight: $bold;
+				line-height: 30px;
+				letter-spacing: 0em;
+				margin-bottom: 4px;
+				color: $primary;
+				text-align: center;
+				text-transform: capitalize;
+				@include respond(tabland) {
+					font-size: 18px;
+					line-height: 24px;
+				}
+			}
+			.designation {
+				font-family: $default;
+				font-size: 14px;
+				font-weight: $semibold;
+				line-height: 24px;
+				letter-spacing: 0em;
+				text-align: left;
+				color: $content;
+				text-align: center;
+				margin-bottom: 0;
+				text-transform: capitalize;
+				@include respond(tabland) {
+					font-size: 13px;
+					line-height: 18px;
+				}
+			}
+		}
+		&__social {
+			max-width: 216px;
+			margin: 20px auto 0 auto;
+			transform: scale(0.5, 0);
+			transform-origin: bottom;
+			margin-top: -36px;
+			transition: $transition;
+			opacity: 0;
+		}
+	}
+	&:hover {
+		.team__social {
+			transform: scale(1);
+			margin-top: 20px;
+			opacity: 1;
+		}
+	}
+}
+
+/*********************************
+/*  Social Links Css Start
+*********************************/
+.social__links {
+	list-style: none;
+	@include flexbox($a: center, $jc: center);
+	flex-wrap: nowrap;
+	li {
+		width: 36px;
+		aspect-ratio: 1/1;
+		margin-right: 12px;
+		border-radius: 50%;
+		color: $content;
+		background: rgba(#b7b7b7, 0.1);
+		@include flexbox($a: center, $jc: center);
+		transition: $transition;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+		@include respond(tabland) {
+			margin-right: 8px;
+		}
+		&:hover {
+			color: $white;
+			background: var(--bc, $secondary);
+			box-shadow: 0px 6px 12px 0px #00000033;
+		}
+	}
+	a {
+		width: 100%;
+		aspect-ratio: 1/1;
+		@include flexbox($a: center, $jc: center);
+		color: currentColor;
+		font-size: 16px;
+
+		@include respond(tabland) {
+			font-size: 14px;
+		}
+	}
+}

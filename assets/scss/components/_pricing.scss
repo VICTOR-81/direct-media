@@ -1,0 +1,196 @@
+/*********************************
+/* Pricing Scetion Start
+**********************************/
+.pricing__wrapper {
+    background: $white;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 5px 0px #5050501a;
+    border-radius: 8px;
+    // padding: 40px 60px;
+    padding: 50px 0;
+
+    position: relative;
+    transition: $transition;
+    z-index: 1;
+
+    @include respond(tabland) {
+        margin-bottom: 30px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        clip-path: polygon(0 0, 100% 0%, 50% 50%, 0% 100%);
+        background: $primary;
+        max-width: 295px;
+        width: 100%;
+        height: 250px;
+        z-index: -1;
+        transition: $transition;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        clip-path: polygon(0 0, 100% 0%, 50% 50%, 0% 100%);
+        background: $heading;
+        width: 130px;
+        height: 130px;
+        z-index: 1;
+    }
+
+    .pricing {
+        &__header {
+            font-family: $default;
+            font-size: 24px;
+            font-weight: $bold;
+            line-height: 30px;
+            color: $white;
+            text-transform: capitalize;
+            transition: $transition;
+            background: $heading;
+            width: 100%;
+            max-width: 280px;
+            height: 78px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+
+            @include respond(tabport) {
+                font-size: 20px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 1px;
+                right: -1px;
+                clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+                background: $white;
+                width: 78px;
+                height: 100%;
+                z-index: 2;
+            }
+        }
+        &__price {
+            font-family: $default;
+            font-size: 40px;
+            line-height: 55px;
+            font-weight: $semibold;
+            color: $heading;
+            display: inline-flex;
+            align-items: center;
+            transition: $transition;
+            margin-top: 20px;
+
+            @include respond(phone-sm) {
+                font-size: 40px;
+            }
+
+            sup {
+                font-size: 18px;
+                line-height: 24px;
+            }
+            span {
+                font-size: 14px;
+                color: #5c6680;
+                font-weight: $regular;
+                line-height: 17px;
+                text-align: left;
+                position: relative;
+                margin-left: 16px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: -8px;
+                    transform: translateY(-50%);
+                    height: 25px;
+                    width: 1px;
+                    background: #e9e9e9;
+                }
+            }
+        }
+        &__list {
+            max-width: 240px;
+            margin: 50px auto 0px;
+
+            @include respond(tabport) {
+                padding: 0px 30px;
+            }
+            @include respond(phone) {
+                padding: 0px;
+            }
+            li {
+                font-family: $default;
+                font-size: 18px;
+                font-weight: $medium;
+                line-height: 24px;
+                @include flexbox($a: center, $jc: inherit);
+                color: #5c6680;
+                margin-bottom: 24px;
+                text-align: center;
+                transition: $transition;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                @include respond(tabport) {
+                    font-size: 14px;
+                }
+                @include respond(phone) {
+                    font-size: 16px;
+                }
+
+                img {
+                    width: 14px;
+                    height: auto;
+                    margin-right: 10px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .card__btn {
+        margin-top: 55px;
+        .btn {
+            max-width: 229px;
+            width: 100%;
+        }
+    }
+    &.active,
+    &:hover {
+        box-shadow: 0px 5px 25px 0px #5050501a;
+        &::after {
+            background: $secondary;
+        }
+        .pricing {
+            &__price {
+                color: $secondary;
+            }
+            &__list {
+                li {
+                    color: $heading3;
+                }
+            }
+        }
+        .card__btn {
+            .btn {
+                background: $secondary;
+                color: $white;
+            }
+        }
+    }
+}
+
+/*********************************
+/* Pricing Scetion End 
+**********************************/

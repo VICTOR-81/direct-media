@@ -1,0 +1,154 @@
+/*********************************
+/* Icon Box Start
+**********************************/
+.iconBox {
+    @include flexbox($a: flex-start, $jc: inherit);
+    margin-bottom: 48px;
+    &__icon {
+        background: $white;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        box-shadow: 0px 16px 56px 0px #ad54f366;
+        @include flexbox($a: center, $jc: center);
+
+        i,
+        img {
+            width: auto;
+            height: auto;
+            font-size: 20px;
+            color: $primary;
+            @include flexbox($a: center, $jc: center);
+        }
+    }
+    &__content {
+        max-width: 390px;
+        margin-left: 24px;
+        flex: 1;
+        .title {
+            font-weight: $bold;
+            margin-bottom: 8px;
+
+            a {
+                color: $heading3;
+                display: block;
+                transition: $transition;
+            }
+        }
+        .desc {
+            font-family: $roboto;
+            font-weight: $regular;
+            color: $content;
+            line-height: 28px;
+            margin-bottom: 0;
+        }
+    }
+    &:hover {
+        .title a {
+            color: $primary;
+        }
+    }
+
+    // This styles is foricon box  version 2
+    &.v2 {
+        margin-bottom: 40px;
+        .iconBox {
+            &__icon {
+                background: rgba($primary, 0.1);
+                width: 80px;
+                height: 80px;
+                border-radius: $radius * 0.5;
+                box-shadow: unset;
+                @include flexbox($a: center, $jc: center);
+
+                i,
+                img {
+                    width: 40px;
+                    height: 40px;
+                    object-fit: contain;
+                    object-position: center;
+                    font-size: 20px;
+                    color: $primary;
+                    @include flexbox($a: center, $jc: center);
+                }
+            }
+            &__content {
+                max-width: 500px;
+                margin-left: 24px;
+                flex: 1;
+                .title {
+                    font-weight: $bold;
+                    margin-bottom: 8px;
+
+                    a {
+                        color: $heading;
+                        display: block;
+                        transition: $transition;
+                    }
+                }
+                .desc {
+                    font-family: $default;
+                    font-weight: $regular;
+                    color: $content;
+                    line-height: 24px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.flex__item {
+    @include flexbox($a: flex-start, $jc: inherit);
+
+    @include respond(tabport) {
+        justify-content: space-between;
+    }
+
+    .iconBox {
+        flex-basis: calc(50% - 24px);
+        align-items: baseline;
+        flex-direction: column;
+
+        @include respond(phone) {
+            flex-basis: calc(50% - 10px);
+        }
+        @include respond(phone-mid) {
+            flex-basis: 100%;
+        }
+
+        &__icon {
+            background: transparent;
+            box-shadow: none;
+            height: auto;
+            width: auto;
+            align-items: baseline;
+
+            .title {
+                font-weight: $semibold;
+                margin-left: 10px;
+
+                a {
+                    color: $heading;
+                    display: block;
+                    transition: $transition;
+                }
+            }
+        }
+        &__content {
+            max-width: 250px;
+            margin-left: 0px;
+
+            @include respond(phone-mid) {
+                max-width: 100%;
+            }
+            .desc {
+                font-family: $default;
+            }
+        }
+    }
+}
+
+/*********************************
+/* Icon Box End
+**********************************/

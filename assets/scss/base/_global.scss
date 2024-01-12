@@ -1,0 +1,22 @@
+/*********************************
+/*  Input Apperance Start
+*********************************/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+	cursor: pointer;
+	border-radius: 4px;
+	margin-right: 2px;
+	-webkit-filter: invert(1);
+	filter: invert(1);
+}
+/*********************************
+/*  Input Apperance End
+*********************************/

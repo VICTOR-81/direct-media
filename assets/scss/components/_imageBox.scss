@@ -1,0 +1,88 @@
+/*********************************
+/* Image Box Start
+**********************************/
+.imageBox {
+    background: $white;
+    padding: 36px 70px;
+    border-radius: $radius;
+    margin-bottom: 30px;
+    height: calc(100% - 30px);
+    border: 1px solid #ededed;
+    box-shadow: 0px 1px 5px 0px #5050501a;
+    transition: $transition;
+
+    @include respond(xl) {
+        padding: 24px 40px;
+    }
+    @include respond(medium) {
+        padding: 24px 30px;
+    }
+    @include respond(phone) {
+        padding: 24px 50px;
+    }
+    @include respond(phone-xm) {
+        padding: 25px;
+    }
+
+    &__icon {
+        background: $white;
+        width: 164px;
+        height: 111px;
+        border-radius: 14px;
+        @include flexbox($a: center, $jc: center);
+        display: inline-flex;
+        margin-bottom: 24px;
+        transition: $transition;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 14px;
+            border: 4px solid rgba($primary, 0.16);
+            object-fit: cover;
+            transition: $transition;
+        }
+    }
+    &__content {
+        margin-bottom: 24px;
+        flex: 1;
+        .title {
+            font-weight: $bold;
+            margin-bottom: 16px;
+
+            a {
+                color: $heading3;
+                display: block;
+                transition: $transition;
+            }
+        }
+        .desc {
+            // font-family: $roboto;
+            font-weight: $regular;
+            color: $content;
+            line-height: 28px;
+            margin-bottom: 0;
+        }
+    }
+    &:hover {
+        border-color: $white;
+        box-shadow: 0px 5px 25px 0px #5050501a;
+        .imageBox {
+            &__icon {
+                img {
+                    border-color: $primary;
+                }
+            }
+            &__content {
+                .title a {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+/*********************************
+/* Image Box End
+**********************************/

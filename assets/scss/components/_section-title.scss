@@ -1,0 +1,54 @@
+/*********************************
+/* Section Title Start
+**********************************/
+.section__title {
+    margin-bottom: 65px;
+    max-width: 580px;
+    .subtitle {
+        color: $primary;
+        margin-bottom: 16px;
+
+        @include respond(phone) {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+    .title {
+        margin-bottom: 0;
+        @include respond(tabland) {
+            font-size: 32px;
+            line-height: 48px;
+        }
+    }
+    .desc {
+        font-weight: $regular;
+        color: $content3;
+        margin: 24px 0 0;
+    }
+    &.text {
+        &-center {
+            margin: 0 auto 65px;
+        }
+        &-start {
+            margin-right: auto;
+        }
+        &-end {
+            margin-left: auto;
+        }
+    }
+    &.v2 {
+        .subtitle {
+            color: $secondary;
+        }
+        .title {
+            color: $white;
+        }
+        .desc {
+            color: $white;
+        }
+    }
+}
+
+/*********************************
+/* Section Title End
+**********************************/
