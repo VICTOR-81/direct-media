@@ -1271,7 +1271,7 @@ p {
   font-size: 16px;
   line-height: 24px;
   color: #47b5f6;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2899,6 +2899,9 @@ p {
 /* Image Box Start
 **********************************/
 .imageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #fff;
   padding: 36px 70px;
   border-radius: 8px;
@@ -3040,8 +3043,8 @@ p {
 }
 
 .counterBox__item {
-  -ms-flex-preferred-size: calc(100% / 4);
-      flex-basis: calc(100% / 4);
+  -ms-flex-preferred-size: calc(100% / 3);
+      flex-basis: calc(100% / 3);
   text-align: center;
   border-right: 0.5px solid #e7e7e7;
   font-family: "Montserrat", sans-serif;
