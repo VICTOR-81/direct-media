@@ -1235,6 +1235,7 @@ p {
   background: #47b5f6;
   color: #fff;
   border: 1px solid #47b5f6;
+  margin-bottom: 30px;
 }
 
 .btn-primary:hover {
@@ -1368,6 +1369,32 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
+.header__address.contact {
+  /* -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  flex-direction: column;
+        }
 
 .header__address .address__list {
   -webkit-box-align: center;
@@ -2394,9 +2421,17 @@ p {
   max-width: 580px;
 }
 
+.section__title.text-start.contact {
+  max-width: 100%;
+}
+
 .section__title .subtitle {
   color: #904df6;
   margin-bottom: 16px;
+}
+
+.section__title .subtitle.black__text {
+  color: #000958;
 }
 
 @media screen and (max-width: 575px) {
@@ -5214,6 +5249,11 @@ p {
   width: 100%;
 }
 
+.req__widget.time__wrapper.black__text h5,
+.req__widget.time__wrapper.black__text li {
+  color: #000958;
+}
+
 .req__widget.time__wrapper .title {
   margin-bottom: 25px;
 }
@@ -7494,6 +7534,11 @@ p {
 
 .footer__address .address__list .address__desc {
   color: #fff;
+}
+
+.footer__address .address__list .address__desc.black__text,
+.footer__address .address__list .address__desc.black__text a {
+  color: #000958;
 }
 
 .footer__address .address__list .address__desc a {
