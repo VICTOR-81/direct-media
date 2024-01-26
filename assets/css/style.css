@@ -2431,7 +2431,7 @@ p {
 }
 
 .section__title .subtitle.black__text,
-.booklets__price-title {
+.product__price-title {
   color: #000958;
 }
 
@@ -7406,11 +7406,11 @@ p {
   color: #ffc90f;
 }
 
-.booklets__price{
+.product__price{
   margin-top: 40px;
 }
 
-.booklets__price-wrapper{
+.product__price-wrapper{
   margin-top: 20px;
   border: 0.8px solid #ededed;
   border-radius: 8px;
@@ -7419,7 +7419,11 @@ p {
   justify-items: center;
 }
 
-.booklets__price-item{
+.product__price-wrapper.business__cards{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.product__price-item{
   width: 100%;
   border: 0.8px solid #ededed;
   text-align: center;
@@ -7427,7 +7431,7 @@ p {
 }
 
 @media screen and (max-width: 450px) {
-  .booklets__price-item{
+  .product__price-item{
     padding: 10px 15px;
   }
 }
